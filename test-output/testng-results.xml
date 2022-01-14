@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-01-12T09:36:14 IST" name="Default suite" finished-at="2022-01-12T09:36:14 IST" duration-ms="96">
+    <groups>
+      <group name="Medium">
+        <method signature="Experiment_1.ce2()[pri:0, instance:com.testng.Experiment_1@7adda9cc]" name="ce2" class="com.testng.Experiment_1"/>
+        <method signature="Experiment_1.ce4()[pri:0, instance:com.testng.Experiment_1@7adda9cc]" name="ce4" class="com.testng.Experiment_1"/>
+        <method signature="Experiment_1.ce5()[pri:0, instance:com.testng.Experiment_1@7adda9cc]" name="ce5" class="com.testng.Experiment_1"/>
+      </group> <!-- Medium -->
+      <group name="Hard">
+        <method signature="Experiment_1.ce3()[pri:0, instance:com.testng.Experiment_1@7adda9cc]" name="ce3" class="com.testng.Experiment_1"/>
+      </group> <!-- Hard -->
+      <group name="Very Hard">
+        <method signature="Experiment_1.ce2()[pri:0, instance:com.testng.Experiment_1@7adda9cc]" name="ce2" class="com.testng.Experiment_1"/>
+      </group> <!-- Very Hard -->
+      <group name="Common">
+        <method signature="Experiment_1.ce1()[pri:0, instance:com.testng.Experiment_1@7adda9cc]" name="ce1" class="com.testng.Experiment_1"/>
+        <method signature="Experiment_1.ce3()[pri:0, instance:com.testng.Experiment_1@7adda9cc]" name="ce3" class="com.testng.Experiment_1"/>
+        <method signature="Experiment_1.ce4()[pri:0, instance:com.testng.Experiment_1@7adda9cc]" name="ce4" class="com.testng.Experiment_1"/>
+      </group> <!-- Common -->
+    </groups>
+    <test started-at="2022-01-12T09:36:14 IST" name="Default test" finished-at="2022-01-12T09:36:14 IST" duration-ms="96">
+      <class name="com.testng.Experiment_1">
+        <test-method signature="ce1()[pri:0, instance:com.testng.Experiment_1@7adda9cc]" started-at="2022-01-12T09:36:14 IST" name="ce1" finished-at="2022-01-12T09:36:14 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ce1 -->
+        <test-method signature="ce2()[pri:0, instance:com.testng.Experiment_1@7adda9cc]" started-at="2022-01-12T09:36:14 IST" name="ce2" finished-at="2022-01-12T09:36:14 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ce2 -->
+        <test-method signature="ce3()[pri:0, instance:com.testng.Experiment_1@7adda9cc]" started-at="2022-01-12T09:36:14 IST" name="ce3" finished-at="2022-01-12T09:36:14 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ce3 -->
+        <test-method signature="ce4()[pri:0, instance:com.testng.Experiment_1@7adda9cc]" started-at="2022-01-12T09:36:14 IST" name="ce4" finished-at="2022-01-12T09:36:14 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ce4 -->
+        <test-method signature="ce5()[pri:0, instance:com.testng.Experiment_1@7adda9cc]" started-at="2022-01-12T09:36:14 IST" name="ce5" finished-at="2022-01-12T09:36:14 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ce5 -->
+      </class> <!-- com.testng.Experiment_1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
