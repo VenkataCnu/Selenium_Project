@@ -6,6 +6,7 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class RobotClass_Example {
 
-	public static void main(String[] args) throws AWTException {
+	public static void main(String[] args) throws AWTException, InterruptedException {
 
 		System.setProperty("webdriver.chrome.driver", "D:\\Drivers\\Browser Drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
@@ -30,9 +31,14 @@ public class RobotClass_Example {
 		driver.findElement(By.xpath("//input[@name='lastName']")).sendKeys("Bose");
 		driver.findElement(By.xpath("//label[text()='Photograph']")).click();
 
-		Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
-		cb.setContents(new StringSelection("D:\\Capture"), null);
+		
+		
+		
+		
+		//Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
+		//cb.setContents(new StringSelection("D:\\Capture"), null);
 
+		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		Robot rb = new Robot();
 		rb.keyPress(KeyEvent.VK_CONTROL);
 		rb.keyPress(KeyEvent.VK_V);

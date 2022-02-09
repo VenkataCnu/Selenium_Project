@@ -14,12 +14,13 @@ public class Now {
 		 driver.findElement(By.id("email")).sendKeys("cnu.agyarapu@gmail.com");
 		 driver.findElement(By.id("pass")).sendKeys("SiMbA_1708");
 		 driver.findElement(By.name("login")).click();
-		 // Actions act = new Actions(driver);
-		 driver.findElement(By.xpath("//*[@id=\"mount_0_0_Lc\"]/div/div[1]/div/div[2]/div[4]/div[1]/div[1]/span/div/a[1]")).click();
-		 driver.getCurrentUrl();	 
+		 
+		 driver.getCurrentUrl();	
+		 driver.getTitle();
 		 
 		 
 		// driver.navigate().back();
+		 driver.switchTo().alert().dismiss();
 		 driver.switchTo().alert().dismiss();
 	}
 

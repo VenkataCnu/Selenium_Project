@@ -1,6 +1,8 @@
 package com.cognizent.org;
 
 import java.io.File;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -30,10 +32,9 @@ public class Preperation {
 		}
 		
 		catch(Exception e){
-			File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			
-			//FileUtils.copyFile(file, new File("D:\\SoftwareTestingMaterial.png"));
-			
+		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		File dst =new File("D:\\Image.jpeg");
+	//	FileUtils.copyFile(src,dst);
 			
 		}
 		
@@ -44,15 +45,6 @@ public class Preperation {
 			
 		}
 	
-		/*	Actions act = new Actions(driver);
-		WebElement element = driver.findElement(By.xpath("//*[@id=\"menu_admin_viewAdminModule\"]/b"));
-		act.moveToElement(element).build().perform();
-	*/
-		
-		
-		
-		
-		
 	}
 }	
 		

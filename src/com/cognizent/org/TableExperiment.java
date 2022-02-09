@@ -7,10 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class Table_Concept {
+public class TableExperiment {
 
 	public static void main(String[] args) {
-
+		
 		WebDriver driver = Example_2.getDriver("Chrome");
 		driver.get("https://opensource-demo.orangehrmlive.com/");
 		driver.manage().window().maximize();
@@ -31,32 +31,36 @@ public class Table_Concept {
 		driver.findElement(By.id("btnSave")).click();
 		driver.findElement(By.linkText("PIM")).click();
 
-		// printing all data
-		List<WebElement> trows = driver.findElement(By.id("resultTable")).findElements(By.tagName("tr"));
-		System.out.println("No of Rows are " + trows.size());
-		int rowsTotal = trows.size();
-
-		List<WebElement> tcol = trows.get(1).findElements(By.tagName("td"));
-		System.out.println("No of Columns are " + tcol.size());
-
-		/*
-		 * for(WebElement row: trows) 
-		 * { 
-		 * 		List <WebElement> column = row.findElements(By.tagName("td"));
-		 * 		for(WebElement col :column) 
-		 * 			{ 	System.out.println(col.getText()); 
-		 *			 } 
-		 * }
-		 */
-
-		for (int row = 1; row < rowsTotal; row++) {
-			List<WebElement> col = trows.get(row).findElements(By.tagName("td"));
-			if (col.get(2).getText().equalsIgnoreCase("Lisa"))
-				System.out.println("Job Title of Lisa is:" + col.get(4).getText());
+		List<WebElement> trows = driver.findElement(By.xpath("//*[contains(@id,'resultTable')]")).findElements(By.tagName("tr"));
+		int totalRows = trows.size();
+		System.out.println(totalRows);
+		
+		List<WebElement> tcols = trows.get(1).findElements(By.tagName("td"));
+		int totalCols = tcols.size();
+		System.out.println(totalCols);
+		
+		/* for(WebElement row: trows) 
+		{
+		List<WebElement> cols = row.findElements(By.tagName("td"));
+		for(WebElement col:cols) 
+		{
+			System.out.println(col.getText());
 		}
-
-		// driver.close();
-	}
-
+			
+		} */
+		
+		for(int i=1;i<totalRows;i++)
+		{
+		List<WebElement> col =trows.get(i).findElements(By.tagName("td"));
+		if(col.get(3).getText().equalsIgnoreCase("Anderson")) 
+		{
+			System.out.println(col.get(2).getText());
+		}
+		
+		}
+		
 	
+	}
+	
+
 }

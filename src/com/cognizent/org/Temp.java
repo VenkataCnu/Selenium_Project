@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class Table_Concept {
+public class Temp {
 
 	public static void main(String[] args) {
 
@@ -30,33 +30,38 @@ public class Table_Concept {
 		dd_Nationality.selectByVisibleText("Indian");
 		driver.findElement(By.id("btnSave")).click();
 		driver.findElement(By.linkText("PIM")).click();
-
-		// printing all data
-		List<WebElement> trows = driver.findElement(By.id("resultTable")).findElements(By.tagName("tr"));
-		System.out.println("No of Rows are " + trows.size());
-		int rowsTotal = trows.size();
-
-		List<WebElement> tcol = trows.get(1).findElements(By.tagName("td"));
-		System.out.println("No of Columns are " + tcol.size());
-
-		/*
-		 * for(WebElement row: trows) 
-		 * { 
-		 * 		List <WebElement> column = row.findElements(By.tagName("td"));
-		 * 		for(WebElement col :column) 
-		 * 			{ 	System.out.println(col.getText()); 
-		 *			 } 
-		 * }
-		 */
-
-		for (int row = 1; row < rowsTotal; row++) {
-			List<WebElement> col = trows.get(row).findElements(By.tagName("td"));
-			if (col.get(2).getText().equalsIgnoreCase("Lisa"))
-				System.out.println("Job Title of Lisa is:" + col.get(4).getText());
+		
+		List<WebElement> trows= driver.findElement(By.id("resultTable")).findElements(By.tagName("tr"));
+		int totalrows = trows.size();
+		
+		List <WebElement> tcols = trows.get(1).findElements(By.tagName("td"));
+		int totalCols = tcols.size();
+		
+		for(int i=1;i<=totalrows;i++)
+		{
+			List <WebElement> cols = trows.get(i).findElements(By.tagName("td"));
+			int no=cols.size();
+			
+		if(cols.get(2).getText().equalsIgnoreCase("Fiona")) 
+		{
+			for(int j=1;j<=no;j++) 
+			{
+				System.out.println(cols.get(j).getText());
+			}
+		} 
+			
+			
+			
 		}
-
-		// driver.close();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
-
-	
 }
